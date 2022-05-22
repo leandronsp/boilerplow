@@ -16,3 +16,9 @@ run.tests: ## Runs Unit tests
 
 rubocop: ## Runs code linter with auto-correction
 	@docker-compose run --rm ruby rubocop -A
+
+ci: ## Runs code linter and unit tests in CI
+	bundle lock --add-platform x86_64-linux
+	bundle install
+	rubocop
+	ruby -Itest test/all.rb

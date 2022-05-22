@@ -23,4 +23,5 @@ Usage: make <target>
   bash                       Creates a container Bash
   run.tests                  Runs Unit tests
   rubocop                    Runs code linter with auto-correction
+  ci                         Runs code linter and unit tests in CI
 ```
